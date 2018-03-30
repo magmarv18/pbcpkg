@@ -1,0 +1,38 @@
+#' Mayo Clinic Primary Biliary Cirrhosis Data
+#'
+#' This data is from the Mayo Clinic trial in primary biliary cirrhosis (PBC) of the liver conducted between 1974 
+#' and 1984. A total of 424 PBC patients, referred to Mayo Clinic during that ten-year interval, met eligibility 
+#' criteria for the randomized placebo controlled trial of the drug D-penicillamine. The first 312 cases in the 
+#' data set participated in the randomized trial and contain largely complete data. The additional 112 cases did 
+#' not participate in the clinical trial, but consented to have basic measurements recorded and to be followed 
+#' for survival. Six of those cases were lost to follow-up shortly after diagnosis, so the data here are on an 
+#' additional 106 cases as well as the 312 randomized participants. 
+#'
+#' @format A data frame with 418 rows and 20 variables:
+#' \describe{
+#'   \item{id}{case number}
+#'   \item{time}{number of days between registration and the earlier of death, transplantion, or study analysis in July, 1986}
+#'   \item{status}{status at endpoint, 0/1/2 for censored, transplant, dead}
+#'   \item{trt}{1/2/NA for D-penicillmain, placebo, not randomised}
+#'   \item{age}{in years}
+#'   \item{sex}{m/f}
+#'   \item{ascites}{presence of ascites}
+#'   \item{hepato}{presence of hepatomegaly or enlarged liver}
+#'   \item{spiders}{blood vessel malformations in the skin}
+#'   \item{edema}{0 no edema, 0.5 untreated or successfully treated, 1 edema despite diuretic therapy}
+#'   \item{bili}{serum bilirunbin (mg/dl)}
+#'   \item{chol}{serum cholesterol (mg/dl)}
+#'   \item{albumin}{ serum albumin (g/dl)}
+#'   \item{copper}{urine copper (ug/day)}
+#'   \item{alk.phos}{ alkaline phosphotase (U/liter)}
+#'   \item{ast}{ aspartate aminotransferase, once called SGOT (U/ml)}
+#'   \item{trig}{ triglycerides (mg/dl)}
+#'   \item{platelet}{ platelet count}
+#'   \item{protime}{ standardised blood clotting time}
+#'   \item{stage}{ histologic stage of disease (needs biopsy)}
+#' }
+#' @source {TR Fleming and DP Harrington (1991), Counting Processes and Survival Analysis. Wiley, New York. ISBN: 0-471-52218-X.}
+#' @source \url{https://stat.ethz.ch/R-manual/R-devel/library/survival/html/pbc.html}
+#' @source \url{http://www-eio.upc.edu/~pau/cms/rdata/csv/survival/pbc.csv}
+#' @source {Data downloaded on 2018 March 28}
+"pbcdata"
