@@ -5,11 +5,6 @@
 #' 
 #' @export
 trt.hist <- function(){
-  #
-  # Laddar interna hjälpfunktioner
-  #
-  source("R/helpers.R")
-  
   # Vektor med överlevnadstid för behandlade patienter
   treated <- getTreated()
   
@@ -20,6 +15,23 @@ trt.hist <- function(){
        ylab = "Frekvens",
        col = "green"
   )
+}
+
+#
+# Lokala funktioner
+#
+getYears <- function(){
+  return( pbcdata$time/365.25 )
+}
+
+getPlacebo <- function(){
+  years <- getYears()
+  return(years[which(pbcdata$trt == 2 & pbcdata$status == 2)]) 
+}
+
+getTreated <- function(){
+  years <- getYears()
+  return(years[which(pbcdata$trt == 1 & pbcdata$status == 2)]) 
 }
 
 #' Ritar histogram över överlevnadstiden i år för kontrollgruppen.

@@ -16,8 +16,6 @@
 #' 
 #' @export
 trt.survival <- function(){
-  source("helpers.R")
-
   #
   # Vektor med överlevnadstid i år
   #
@@ -37,4 +35,22 @@ trt.survival <- function(){
            xlab = "Behandlingsgrupp",
            ylab = "Överlevnadstid (år)",
            main = "Överlevnad för behandlad resp obehandlad grupp")
+}
+
+
+#
+# Lokala funktioner
+# 
+getYears <- function(){
+  return( pbcdata$time/365.25 )
+}
+
+getPlacebo <- function(){
+  years <- getYears()
+  return(years[which(pbcdata$trt == 2 & pbcdata$status == 2)]) 
+}
+
+getTreated <- function(){
+  years <- getYears()
+  return(years[which(pbcdata$trt == 1 & pbcdata$status == 2)]) 
 }
