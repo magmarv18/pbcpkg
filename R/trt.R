@@ -16,7 +16,7 @@
 #' 
 #' @export
 trt.survival <- function(){
-  source("R/helpers.R")
+  source("helpers.R")
 
   #
   # Vektor med överlevnadstid i år
