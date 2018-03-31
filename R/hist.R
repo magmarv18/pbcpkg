@@ -17,23 +17,6 @@ trt.hist <- function(){
   )
 }
 
-#
-# Lokala funktioner
-#
-getYears <- function(){
-  return( pbcdata$time/365.25 )
-}
-
-getPlacebo <- function(){
-  years <- getYears()
-  return(years[which(pbcdata$trt == 2 & pbcdata$status == 2)]) 
-}
-
-getTreated <- function(){
-  years <- getYears()
-  return(years[which(pbcdata$trt == 1 & pbcdata$status == 2)]) 
-}
-
 #' Ritar histogram över överlevnadstiden i år för kontrollgruppen.
 #' 
 #' @param Inga Inga inparametrar
@@ -41,11 +24,6 @@ getTreated <- function(){
 #' 
 #' @export
 ctl.hist <- function(){
-  #
-  # Laddar interna hjälpfunktioner
-  #
-  source("helpers.R", local = T)
-
   # Vektor med överlevnadstid (år) för patienter i kontrollgruppen
   placebo <- getPlacebo()
   

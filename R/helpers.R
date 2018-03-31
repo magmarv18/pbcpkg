@@ -6,15 +6,21 @@
 # getTreated - returnerar en vektor med överlevnaden (i år) för avlidna patienter i behandlingssgruppen.
 #
 
+#' 
+#' @export
 getYears <- function(){
   return( pbcdata$time/365.25 )
 }
 
+#' 
+#' @export
 getPlacebo <- function(){
   years <- getYears()
   return(years[which(pbcdata$trt == 2 & pbcdata$status == 2)]) 
 }
 
+#' 
+#' @export
 getTreated <- function(){
   years <- getYears()
   return(years[which(pbcdata$trt == 1 & pbcdata$status == 2)]) 
