@@ -1,5 +1,10 @@
 # pbcpkg
-### Detta är den andra VG-uppgiften i "Statistiska metoder med R" vt 18.
+## Abstract
+Detta projekt utgår från datasetet "Mayo Clinic Primary Biliary Cirrhosis Data" som även finns i R under biblioteket "survival". Här ställer jag frågan om överlevnadstiden påverkas av behandlingen eller inte. Vald endpoint är patienter som avlidit före studiens avslut. Pga skeva distibutioner valdes Mann-Whitney-Wilcoxon-test. Slutsatsen blev att ingen skillnad föreligger mellan den läkemedelsbehandlade gruppen och kontroll/placebogruppen.
+
+### Author
+Magnus Mårtensson
+
 ## Installation
 Installera och ladda biblioteket devtools som möjliggör nedladdning av paket från github. Därefter laddas paketet ner och installeras.
 ```
@@ -114,9 +119,6 @@ Blir uppgiften godkänd låter jag den ligga på github, men denna readme kommer
 Kodens licens är Public domain, således fritt att kopiera och modifiera utan att behöva ange upphovsman.
 
 Datasetets licens är okänd.
-
-## Author
-Magnus Mårtensson
 
 ## Plottar
 ![Plot 1: Överlevnadstid för behandlingsgruppen, genererad av trt.hist()](images/trt.hist.png)
