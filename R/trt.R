@@ -16,16 +16,18 @@
 #' 
 #' @export
 trt.survival <- function(){
+  source("R/helpers.R")
+
   #
-  # dagar -> år, ta hänsyn till skottår.
+  # Vektor med överlevnadstid i år
   #
-  years <- pbcdata$time/365.25
-  
+  years <- getYears()
+
   #
-  # Gör utskriften från wilcox.test lite snyggare
+  # Vektorer med överlevnadstid för resp grupp. 
   #
-  treated <- years[which(pbcdata$trt == 1 & pbcdata$status == 2)]
-  placebo <- years[which(pbcdata$trt == 2 & pbcdata$status == 2)]
+  treated <- getTreated()
+  placebo <- getPlacebo()
   
   print( wilcox.test(x = treated, y = placebo))
   

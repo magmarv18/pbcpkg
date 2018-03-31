@@ -78,16 +78,14 @@ h1 - det finns en skillnad
 ### Kod och data
 Datasetet är sparat som data/pbc.RData. Det laddas automatiskt tillsammans med paketet.
 
-Övrig kod ligger i katalogen R. Koden som löser problemet är trt.survival() som finns i trt.R.
+Övrig kod ligger i katalogen R. Koden som löser problemet är trt.survival() som finns i trt.R. Kod för histogram finns i hist.R, kod för pie-plot finns i pie.R. Interna hjälpfunktioner finns i helpers.R.
 
-Det finns även en mf.pie() som visar fördelningen kvinnor/män, den löser inte frågan men ritar en piechart.
-
-Slutligen, vill man ladda ner datasetet på nytt finns loadRemote()
+Slutligen, vill man ladda ner datasetet på nytt finns loadRemote() i filen loaddata.R.
 
 ### Lösning
 treated och placebo är alltså två icke normalfördelade subset bestående av överlevnadstiden i år från registrering fram till dödsfall inträffar.
 
-Pga skeva distributioner valdes Mann-Whitney-Wilcoxon-test:
+Pga skeva distributioner (plot 1 och 2) valdes Mann-Whitney-Wilcoxon-test:
 ```
 	Wilcoxon rank sum test with continuity correction
 
@@ -97,11 +95,12 @@ alternative hypothesis: true location shift is not equal to 0
 ```
 
 Med ett p-värde på 0.34 kan nollhypotesen inte förkastas.
+Se plot 3 nedan för grafisk representation.
 
 ### Kommentar
-Rent metodmässigt valde jag mellan oparat t-test och MWW, det blev den senare då det finns en tydlig skevhet i distributionen.
+Rent metodmässigt valde jag mellan oparat t-test och MWW, det blev den senare då det finns en tydlig skevhet i distributionen (plot 1 och 2).
 
-Begränsningarna i övrigt är många, en övervägande majoritet (n = 232) överlevde studien och det är oklart om detta påverkat resultatet.
+Begränsningarna i övrigt är många, en övervägande majoritet (n = 232) överlevde studien och det är oklart om detta påverkat resultatet (se plot 4).
 
 Mitt fokus här låg på paketering, kodning och dokumentation, till skillnad mot tentan där problemlösningen fick bli huvudsaken. Således valde jag ett "enkelt" problem med en "enkel" lösning.
 
@@ -113,3 +112,15 @@ Blir uppgiften godkänd låter jag den ligga på github, men denna readme kommer
 Kodens licens är Public domain, således fritt att kopiera och modifiera utan att behöva ange upphovsman.
 
 Datasetets licens är okänd.
+
+### Author
+Magnus Mårtensson
+
+### Plottar
+![Plot 1: Överlevnadstid för behandlingsgruppen, genererad av trt.hist()](images/trt.hist.png)
+
+![Plot 2: Överlevnadstid för behandlingsgruppen, genererad av ctl.hist()](images/ctl.hist.png)
+
+![Plot 3: Jämförelse mellan grupperna, från trt.survival().](images/trt.survival.png)
+
+![Plot 4: Fördelning av patienter vid studiens slut, från status.pie()](images/status.pie.png)
