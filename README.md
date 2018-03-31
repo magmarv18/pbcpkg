@@ -1,12 +1,12 @@
 # pbcpkg
-## Abstract
+## Sammanfattning
 Detta projekt utgår från datasetet "Mayo Clinic Primary Biliary Cirrhosis Data" som även finns i R under biblioteket "survival". Här ställer jag frågan om överlevnadstiden påverkas av behandlingen eller inte. Vald endpoint är patienter som avlidit före studiens avslut. Pga skeva distibutioner valdes Mann-Whitney-Wilcoxon-test. Slutsatsen blev att ingen skillnad föreligger mellan den läkemedelsbehandlade gruppen och kontroll/placebogruppen.
 
 ### Author
 Magnus Mårtensson
 
 ## Installation
-Installera och ladda biblioteket devtools som möjliggör nedladdning av paket från github. Därefter laddas paketet ner och installeras.
+Installera (om nödvändigt) och ladda biblioteket devtools som möjliggör nedladdning av paket från github. Ladda därefter ner pbcpkg, installera och ladda.
 ```
 install.packages("devtools")
 library(devtools)
