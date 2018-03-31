@@ -1,6 +1,6 @@
 # pbcpkg
 ## Sammanfattning
-Detta projekt utgår från datasetet "Mayo Clinic Primary Biliary Cirrhosis Data" som även finns i R under biblioteket "survival". Här ställer jag frågan om överlevnadstiden påverkas av behandlingen eller inte. Vald endpoint är patienter som avlidit före studiens avslut. Pga skeva distibutioner valdes Mann-Whitney-Wilcoxon-test. Slutsatsen blev att ingen skillnad föreligger mellan den läkemedelsbehandlade gruppen och kontroll/placebogruppen.
+Detta projekt utgår från datasetet "Mayo Clinic Primary Biliary Cirrhosis Data" som även finns i R under biblioteket "survival". Här ställer jag frågan om överlevnadstiden påverkas av behandlingen eller inte. Vald endpoint är patienter som avlidit före studiens avslut. Pga skeva distibutioner valdes Mann-Whitney-Wilcoxon-test. Slutsatsen blev att ingen signifikant skillnad föreligger mellan den läkemedelsbehandlade gruppen och kontroll/placebogruppen.
 
 ### Author
 Magnus Mårtensson
