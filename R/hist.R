@@ -44,7 +44,7 @@ ctl.hist <- function(){
   #
   # Laddar interna hjälpfunktioner
   #
-  source("R/helpers.R")
+  source("R/helpers.R", local = T)
 
   # Vektor med överlevnadstid (år) för patienter i kontrollgruppen
   placebo <- getPlacebo()
