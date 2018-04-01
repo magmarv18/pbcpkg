@@ -6,7 +6,7 @@ Detta projekt utgår från datasetet "Mayo Clinic Primary Biliary Cirrhosis Data
 Magnus Mårtensson
 
 ## Installation
-Installera (om nödvändigt) och ladda biblioteket devtools som möjliggör nedladdning av paket från github. Ladda därefter ner pbcpkg, installera och ladda.
+Installera (om nödvändigt) och ladda biblioteket devtools som möjliggör nedladdning av paket från github. Ladda därefter ner pbcpkg, installera och ladda in i R-miljön.
 ```
 install.packages("devtools")
 library(devtools)
@@ -83,14 +83,14 @@ h1 - det finns en skillnad
 ## Kod och data
 Datasetet är sparat som data/pbc.RData. Det laddas automatiskt tillsammans med paketet.
 
-Övrig kod ligger i katalogen R. Koden som löser problemet är trt.survival() som finns i trt.R. Kod för histogram finns i hist.R, kod för pie-plot finns i pie.R. Interna hjälpfunktioner finns i helpers.R.
+Övrig kod ligger i katalogen R. Koden som löser problemet är trt.survival() som finns i trt.R. Kod för histogram finns i hist.R, kod för pie-plot finns i pie.R. helpers.R innehåller interna hjälpfunktioner men används inte för stunden då source() inte funkar för paketerad kod.
 
 Slutligen, vill man ladda ner datasetet på nytt finns loadRemote() i filen loaddata.R.
 
 Samtliga funktioner utom de interna är dokumenterade enligt R-standard.
 
 ## Lösning
-treated och placebo är alltså två icke normalfördelade subset bestående av överlevnadstiden i år från registrering fram till dödsfall inträffar.
+Variablerna treated och placebo är alltså två icke normalfördelade subset bestående av överlevnadstiden i år från registrering fram till dödsfall inträffar.
 
 Pga skeva distributioner (plot 1 och 2) valdes Mann-Whitney-Wilcoxon-test:
 ```
