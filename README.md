@@ -83,7 +83,7 @@ h1 - det finns en skillnad
 ## Kod och data
 Datasetet är sparat som data/pbc.RData. Det laddas automatiskt tillsammans med paketet.
 
-Övrig kod ligger i katalogen R. Koden som löser problemet är trt.survival() som finns i trt.R. Kod för histogram finns i hist.R, kod för pie-plot finns i pie.R. helpers.R innehåller interna hjälpfunktioner men används inte för stunden då source() inte funkar för paketerad kod.
+Övrig kod ligger i katalogen R. Koden som löser problemet är trt.survival() som finns i trt.R. Kod för histogram finns i hist.R, kod för pie-plot finns i pie.R. helpers.R innehåller interna hjälpfunktioner.
 
 Slutligen, vill man ladda ner datasetet på nytt finns loadRemote() i filen loaddata.R.
 
